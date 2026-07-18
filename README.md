@@ -26,10 +26,36 @@ the opposite: **plain files you own**, on a path you choose.
 
 Works on Windows, macOS, and Linux. One safe async hook, zero background processes.
 
-## Install
+## Install with Claude Code (easiest)
+
+Open Claude Code in any folder and paste this prompt — it does everything:
+
+```
+Clone and install Infinite-Memory from
+https://github.com/Maneco26/Infinite-Memory — run its installer
+(install/install.py), and when it's done activate /infinite-memory so I can
+choose where my memory is stored. Confirm the Stop hook was registered.
+```
+
+If your Claude needs it spelled out step by step:
+
+```
+Do this in order:
+1. git clone https://github.com/Maneco26/Infinite-Memory into a folder and cd into it.
+2. Run the installer: `python install/install.py` (Windows) or `bash install/install.sh` (macOS/Linux).
+3. Confirm it installed the skill + scripts and registered the Stop hook.
+4. Then activate /infinite-memory and guide me to pick where to store my memory
+   (suggest a synced folder like Dropbox/OneDrive if I want it to follow me across machines).
+```
+
+**Requirements:** Python 3 in PATH. Works in the Claude Code **desktop app** or
+**CLI** (same machine — it can see your disk). Not on the cloud/web Claude Code,
+which runs on a remote sandbox without access to your local disk.
+
+## Install manually
 
 ```bash
-git clone https://github.com/<you>/Infinite-Memory.git
+git clone https://github.com/Maneco26/Infinite-Memory.git
 cd Infinite-Memory
 
 # macOS / Linux
