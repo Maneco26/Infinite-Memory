@@ -1,0 +1,12 @@
+# Never ship anyone's actual memory or secrets
+_global/CREDENTIALS.md
+**/transcripts/
+**/config.json
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
